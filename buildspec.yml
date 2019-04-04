@@ -5,7 +5,6 @@ phases:
     commands:
       # Upgrade AWS CLI to the latest version
       - pip install --upgrade awscli
-      - sudo apt install zip unzip -y
   build:
     commands:
       - echo $CODEBUILD_SRC_DIR

@@ -1,0 +1,13 @@
+version: 0.2
+
+phases:
+  install:
+    commands:
+      # Upgrade AWS CLI to the latest version
+      - pip install --upgrade awscli
+  build:
+    commands:
+      - aws lambda update-function-code --function-name generatecsvfromxls-ms --zip-file fileb://generatecsvfromxls-ms-1.0.0.jar
+      - chmod 777 shelldev.sh
+      - bash shelldev.sh
+

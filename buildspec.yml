@@ -1,0 +1,19 @@
+version: 0.2
+
+phases:
+  install:
+    commands:
+      # Upgrade AWS CLI to the latest version
+      - pip install --upgrade awscli
+      - sudo apt install zip unzip -y
+  build:
+    commands:
+      - echo $CODEBUILD_SRC_DIR
+      - echo Build started on `date`
+      - mvn package
+artifacts:
+  files:
+     - target/generatecsvfromxls-ms-1.0.0.jar
+     - buildscripts/dev/buildspecDeployLambda.yml
+     - buildscripts/dev/shelldev.sh
+  discard-paths: yes

@@ -13,7 +13,7 @@ phases:
       - mvn package
 artifacts:
   files:
-     - target/generatecsvfromxls-ms-1.0.0.jar
-     - buildscripts/dev/buildspecDeployLambda.yml
-     - buildscripts/dev/shelldev.sh
+     - target/JenkinsWar.jar
+     - buildspecDeployLambda.yml
+     - shelldev.sh
   discard-paths: yes

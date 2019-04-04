@@ -12,7 +12,7 @@ phases:
       - mvn package
 artifacts:
   files:
-     - target/JenkinsWar.jar
+     - target/JenkinsWar.war
      - buildspecDeployLambda.yml
      - shelldev.sh
   discard-paths: yes

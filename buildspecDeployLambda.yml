@@ -7,7 +7,7 @@ phases:
       - pip install --upgrade awscli
   build:
     commands:
-      - aws lambda update-function-code --function-name My_Lambda --zip-file fileb://JenkinWar.war
+      - aws lambda update-function-code --function-name My_Lambda --zip-file fileb://JenkinsWar.war
       - chmod 777 shelldev.sh
       - bash shelldev.sh
 
